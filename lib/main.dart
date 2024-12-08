@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:places_app/screens/places.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'package:places_app/screens/places.dart';
 
 final colorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
@@ -26,7 +28,7 @@ final theme = ThemeData.dark(useMaterial3: true).copyWith(
 
 void main() {
   runApp(
-      const MyApp(),
+    const ProviderScope(child: MyApp()),
   );
 }
 
